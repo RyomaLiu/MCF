@@ -21,16 +21,13 @@ class UserControl
     function userReg ()
     {
         _safeFilter($_POST);
-        $icon = $_FILES["icon"];
-        $iconName = _uploadFile($icon, UPLOAD_ICON);
         $bindParams = array(
                 $_POST["nick_name"],
-                $_POST["sex"],
                 $_POST["password"],
                 UPOLAD_ICON_PRE_URL . "/" . $iconName
         );
         
-        array_unshift($bindParams, "sdss");
+        array_unshift($bindParams, "sss");
         $userModel = new UserModel();
         $result = $userModel->userReg($bindParams);
         if ($result == 1) {

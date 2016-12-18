@@ -22,7 +22,7 @@ class UserModel
     function userReg ($bindParams)
     {
         $db = $GLOBALS[DB_MD5KEY];
-        $sql = "insert into user(nick_name,sex,password,icon)values(?,?,?,?);";
+        $sql = "insert into user(nick_name,password,icon)values(?,?,?);";
         $result = _runSql($db, $sql, $bindParams);
         return $result;
     }
