@@ -21,15 +21,16 @@ function _connectDB ()
 {
     $dbInfo = $GLOBALS["db"][DB_KEY];
     if (! $dbInfo) {
-        _errorEcho("没有可用的数据库连接信息");
+        _errorLog("没有可用的数据库连接信息");
     }
     // 超全局变量中不存在则创建数据库连接
     if (! isset($GLOBALS[DB_MD5KEY])) {
         $dbLink = mysqli_connect($GLOBALS["db"][DB_KEY]["host"], 
-                $GLOBALS["db"][DB_KEY]["user"], $GLOBALS["db"][DB_KEY]["password"], 
+                $GLOBALS["db"][DB_KEY]["user"], 
+                $GLOBALS["db"][DB_KEY]["password"], 
                 $GLOBALS["db"][DB_KEY]["database"]);
         if (! $dbLink) {
-            _errorEcho("数据库连接失败");
+            _errorLog("数据库连接失败");
         }
         mysqli_set_charset($dbLink, "utf8");
         // 存储到超全局变量

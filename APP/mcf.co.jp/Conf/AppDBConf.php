@@ -11,7 +11,7 @@
 #All rights reserved.
 ######################################Info######################################
 $GLOBALS["db"]["tsc"]["host"] = "127.0.0.1";
-$GLOBALS["db"]["tsc"]["user"] = "Ryoma";
-$GLOBALS["db"]["tsc"]["password"] = "lmc624LMC624";
-$GLOBALS["db"]["tsc"]["database"] = "Demo";
+$GLOBALS["db"]["tsc"]["user"] = "lmc";
+$GLOBALS["db"]["tsc"]["password"] = "lmc624LMC624@";
+$GLOBALS["db"]["tsc"]["database"] = "Lmc";
 ?>

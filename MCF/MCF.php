@@ -24,5 +24,4 @@ require_once (MCF . "/Core/MCFLog.php");
 require_once (MCF . "/DB/MCFDBManager.php");
 //
 require_once (MCF . "/Core/MCFUpload.php");
-
 ?>
